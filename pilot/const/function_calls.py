@@ -532,3 +532,24 @@ GET_BUG_REPORT_MISSING_DATA = {
         }
     }],
 }
+
+LIST_RELEVANT_FILES = {
+    'definitions': [{
+        'name': 'list_relevant_files',
+        'description': 'List of relevant files for the current task.',
+        'parameters': {
+            "type": "object",
+            "properties": {
+                "relevant_files": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "description": "Path to the file that is relevant for the current task."
+                    },
+                }
+            },
+            "required": ["relevant_files"],
+            "additionalProperties": False
+        }
+    }],
+}
